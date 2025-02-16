@@ -82,6 +82,7 @@ export const Nav = () => {
                 {pages.map((page) => (
                   <Link to={page == "Reservation" ? "/booking" : "/"}>
                     <MenuItem
+                      data-testid={page}
                       key={page}
                       onClick={handleCloseNavMenu}
                       sx={{ cursor: "pointer" }}
@@ -119,6 +120,7 @@ export const Nav = () => {
                 <>
                   <Link to={page == "Reservation" ? "/booking" : "/"}>
                     <Button
+                      data-testid={page + "-button"}
                       key={page + "-dropdown"}
                       onClick={handleCloseNavMenu}
                       sx={{
